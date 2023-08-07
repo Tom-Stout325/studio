@@ -9,8 +9,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>
+      {% block title %}  
+      {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <link
         href="{% static 'styles/app.css' %}"
@@ -23,21 +26,28 @@
         type="image/x-icon"> 
         
   </head>
-    {% include 'components/navbar.html' %} 
-    {% include 'components/footer.html' %} 
-    {% include 'components/to_the_top.html' %} 
-
+    
     {% if messages %}
       <ul class="messages">
         {% for message in messages %}
-          <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          <li 
+          {% if message.tags %} 
+            class="{{ message.tags }}"
+          {% endif %}>
+          {{ message }}
+        </li>
         {% endfor %}
       </ul>
     {% endif %}
 
-  <body>
+    {% include 'components/navbar.html' %} 
+    <body>
+
+    {% block content %}
+
+    {% endblock %}
 
 
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'app.apps.ClientsConfig',
+    'clients.apps.ClientsConfig',
     "bootstrap5",
     'fontawesomefree',
 

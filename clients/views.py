@@ -5,8 +5,5 @@ from django.contrib import messages
 
 
 def HomePage(request):
-    return render(request, 'app/home.html')
+    return render(request, 'clients/home.html', {})
 
-
-class ThankYouView(generic.TemplateView):
-    template_name = ('components/thank_you.html')
