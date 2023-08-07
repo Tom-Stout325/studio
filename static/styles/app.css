@@ -1,0 +1,43 @@
+/* Matte Color Palet 
+
+primary: #1D5B79 /  rgb(29, 91, 121)  Blue
+secondary: #61677A /  rgb(97, 103, 122)  Gray                      
+success: #468B97 / rgb(70, 139, 151)  Green
+danger: #EF6262 / rgb(239, 98, 98)  Red
+warning: #F3AA60 / rgb(243, 170, 96) Yellow
+info:  #ACFADF / rgb(172, 250, 223) Bright Green
+white: #F3EFE0 / rgb(243, 239, 224)
+gray: #61677A / D8D9DA
+
+*/
+
+
+/* -=-=-=-=-=-=-=-=-=-= Fonts -=-=-=-=-=-=-=-=-=-=
+
+Roboto:: font-family: 'Roboto', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+Montserrat: font-family: 'Montserrat', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+Comfortaa: font-family: 'Comfortaa', cursive;
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap');
+
+Poiret One:  font-family: 'Poiret One', cursive;
+        @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+-=-=-=-=-=-=-=-=-=-=   All Fonts -=-=-=-=-=-=-=-=-=-=
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Montserrat:wght@100;200;300;400&family=Poiret+One&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Montserrat:wght@100;200;300;400&family=Poiret+One&family=Roboto:wght@100;300;400&display=swap');
+
+font-family: 'Comfortaa', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Roboto', sans-serif;
+
+*/

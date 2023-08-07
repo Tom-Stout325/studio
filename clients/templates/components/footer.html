@@ -1,0 +1,222 @@
+{% load static %}
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-distributed {
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* Footer left */
+  .footer-distributed .footer-left {
+    width: 40%;
+  }
+  /* The company logo */
+  .footer-distributed h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #c4c4c4;
+    margin: 0;
+  }
+  /* Footer links */
+  .footer-distributed .footer-links {
+    font-family: "Montserrat", sans-serif;
+    color: #c4c4c4;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+  .footer-distributed .footer-company-name {
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  /* Footer Center */
+  .footer-distributed .footer-center {
+    width: 35%;
+  }
+  .footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #c4c4c4;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  .footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+  }
+  .footer-distributed .footer-center p {
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    color: #c4c4c4;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .footer-distributed .footer-center p span {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .footer-distributed .footer-center p a {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+  }
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* Footer Right */
+  .footer-distributed .footer-right {
+    width: 20%;
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #c4c4c4;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #c4c4c4;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+ 
+  @media (max-width: 880px) {
+    .footer-distributed {
+      font: bold 14px sans-serif;
+    }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .footer-distributed .footer-center i {
+      margin-left: 0;
+    }
+  }
+</style>
+<br><br>
+<div class="container">
+  {% include 'components/social_media.html' %}
+</div>
+<div class="container">
+  {% include 'components/contact_form.html' %}
+</div>
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Tom Stout |<span style="color: rgb(186, 228, 221); font-size: 1.2rem;"> Creative Studio</span></h3>
+        <p class="footer-links">
+        <a href="{% url 'home' %}" class="link-1">Home</a>
+        <a href="">Clients</a>
+        <a href="">About</a>
+        <a href="">Drone</a>
+        <a href="">Contact</a>
+        </p>
+        <p class="footer-company-name">
+        Copyright &copy;
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+        12bytes
+        </p>
+    </div>
+    <div class="footer-center">
+        <div>
+          <i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i>
+          <a href="{% url 'login' %}"><p>Login</p></a>      
+        </div>
+        <div>
+            <i class="fa fa-location-dot fa-2xl"></i>
+            <p>Fishers, Indiana</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:tom@tom-stout.com"><p>tom@tom-stout.com</p></a>
+        </div>
+        <div>
+            <i class="fa fa-file-code fa-xl"></i>
+            <p>Powered By 12bytes</p>
+        </div>
+        <div>
+            <i class="fa-brands fa-safari"></i>
+             <a href="https://12bytes.net"><p>www.12bytes.net</p></a>
+        </div>
+    </div>
+        <div class="footer-right">
+            <p class="footer-company-about mb-3">
+                <span>About Tom Stout Photography</span>
+                Capturing timeless moments through expert portraiture, senior portraits,
+                weddings, and stunning aerial photography and video. Trust Tom Stout's
+                artistic vision to create unforgettable memories.
+            </p>
+        <div>
+
+            <a class="text-muted" href="https://www.facebook.com/ShotByTom"><i class="fa-brands fa-facebook fa-2xl" style="color: #c4c4c4; padding-left: 0.5rem" ></i></a>
+            <a class="text-muted" href="https://www.instagram.com/the_tom.stout/"><i class="fa-brands fa-instagram fa-2xl" style="color: #c4c4c4; padding-left: 0.5rem"></i></a>
+            <a class="text-muted" href="https://www.youtube.com/channel/UCe7k3O6jQiM_MnY9-rXre4w"><i class="fa-brands fa-square-youtube fa-2xl" style="color: #c4c4c4; padding-left: 0.5rem"></i></a>
+            <a class="text-muted" href="https://www.linkedin.com/in/tom-stout-2ab055211/"><i class="fa-brands fa-youtube fa-2xl" style="color: #c4c4c4; padding-left: 0.5rem"></i></a>
+        </div>
+    </div>
+</footer>

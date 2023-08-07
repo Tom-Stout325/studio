@@ -1,0 +1,22 @@
+{% extends 'index.html' %} 
+{% load static %} 
+
+{% block title %} 
+  Thank you! 
+{% endblock %} 
+
+{% block content%}
+  <body>
+    <div class="text-center mt-5">
+      <img class="w-50" src="{% static 'images/14_c.png' %}" alt="Tom Stout Photography" />
+    </div>
+    <section class="section w-100 section-dark"> 
+      <div class="w-50 mx-auto fw-light mb-5">
+        <h2 class="text-center fw-bold">Thanks!</h2>
+        <h3 class="fw-lighter">
+          Thank you for contacting me, I will get back to you right away!
+        </h3>
+      </div>
+    </section>
+  </body>
+{% endblock %}

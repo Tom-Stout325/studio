@@ -1,0 +1,43 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+
+    <link
+        href="{% static 'styles/app.css' %}"
+        rel="stylesheet"
+        type="text/css"/>
+  
+    <link 
+        href="{% static 'images/favicon.ico' %}"
+        rel="icon" 
+        type="image/x-icon"> 
+        
+  </head>
+    {% include 'components/navbar.html' %} 
+    {% include 'components/footer.html' %} 
+    {% include 'components/to_the_top.html' %} 
+
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  <body>
+
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  </body>
+</html>

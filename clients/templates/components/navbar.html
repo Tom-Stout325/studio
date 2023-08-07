@@ -1,0 +1,80 @@
+{% load static %} 
+{% load bootstrap5 %} 
+{% bootstrap_css %} 
+{% bootstrap_javascript %} 
+{% bootstrap_messages %}
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .navbar-scroll .nav-link,
+  .navbar-scroll .navbar-toggler-icon,
+  .navbar-scroll .navbar-brand {
+    color: #fff;
+  }
+  /* Color of the links AFTER scroll */
+  .navbar-scrolled .nav-link,
+  .navbar-scrolled .navbar-toggler-icon,
+  .navbar-scrolled .navbar-brand {
+    color: #9a0303;
+  }
+  /* Color of the navbar AFTER scroll */
+  .navbar-scroll,
+  .navbar-scrolled {
+    background-color: #c9df4a;
+  }
+  .mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+  }
+  .navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="{}" height="50px" alt="Tom Stout Photography"/></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{}">Seniors</a></li>
+            <li><a class="dropdown-item" href="{}">Portraits</a></li>
+            <li><a class="dropdown-item" href="{}">Weddings</a></li>
+            <li><a class="dropdown-item" href="{}">Drone</a></li>
+            <li><hr class="dropdown-divider"/></li>
+            <li><a class="dropdown-item" href="#">12bytes Portfolio</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{}">Clients</a></li>
+       
+        <li class="nav-item"><a class="nav-link" href="{}">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://12bytes.net" target="blank">Coding Bootcamps</a></li>
+      </ul>
+      <!-- <ul class="navbar-nav d-flex flex-row">
+        {% if request.user.is_authenticated %}
+          <li class="nav-item me-3 me-lg-0"><a class="nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i></a></li>
+        {% else %} 
+          <li class="nav-item me-3 me-lg-0"><a class="nav-link" href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i></a></li>
+        {% endif %}
+      </ul> -->
+    </div>
+  </div>
+</nav>
