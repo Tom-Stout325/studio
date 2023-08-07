@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(Client)
+admin.site.register(Client_Number)
+admin.site.register(Session)
+admin.site.register(Session_Number)
