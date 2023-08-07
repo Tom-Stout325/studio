@@ -81,12 +81,21 @@
                 Company
               </a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="{% url 'logout' %}">
                 <span data-feather="file-text"></span>
                 Logout
               </a>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                <span data-feather="file-text"></span>
+                Login
+              </a>
+            </li>
+            {% endif%}
           </ul>
         </div>
       </nav>
